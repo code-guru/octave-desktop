@@ -32,7 +32,7 @@ script:
       docker push x11vnc/octave-desktop:4.0.2 &&
       touch success)'
   # Test script without launching webbrowser and push new image if successful
-  - git clone git@github.com:x11vnc/octave-desktop master
+  - git clone https://github.com/x11vnc/octave-desktop master
   - 'master/octave_desktop.py -d -n -t 4.0.2 && docker stop $(docker ps -q)'
   - 'master/octave_jupyter.py -d -n -t 4.0.2 && docker stop $(docker ps -q)'
   - docker images
