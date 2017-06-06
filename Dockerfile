@@ -46,18 +46,6 @@ RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
     python3 get-pip.py && \
     pip3 install -U \
          setuptools \
-         numpy \
-         matplotlib \
-         sympy \
-         scipy \
-         pandas \
-         nose \
-         sphinx \
-         flufl.lock \
-         ply \
-         pytest \
-         six \
-         urllib3 \
          ipython \
          jupyter \
          ipywidgets && \
