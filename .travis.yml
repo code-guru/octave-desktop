@@ -10,5 +10,5 @@ script:
   - git clone https://github.com/compdatasci/octave-desktop.git master &&
     git clone -b $BRANCH https://github.com/compdatasci/octave-desktop.git daily &&
     docker build --tag compdatasci/octave-desktop:daily daily &&
-    master/octave-desktop.py -d -n -t daily && docker stop $(docker ps -q)
+    master/octave_desktop.py -d -n -t daily && docker stop $(docker ps -q)
   - docker images
