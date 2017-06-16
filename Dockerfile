@@ -3,13 +3,13 @@
 # Authors:
 # Xiangmin Jiao <xmjiao@gmail.com>
 
-FROM x11vnc/desktop:latest
+FROM x11vnc/desktop:14.04
 LABEL maintainer "Xiangmin Jiao <xmjiao@gmail.com>"
 
 USER root
 WORKDIR /tmp
 
-ENV OCTAVE_VERSION=4.0.2
+ENV OCTAVE_VERSION=3.8.1
 
 # Install system packages and build Octave
 RUN apt-add-repository ppa:octave/stable && \
