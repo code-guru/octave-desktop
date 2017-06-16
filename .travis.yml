@@ -4,6 +4,7 @@ services: docker
 env:
   - BRANCH=master
   - BRANCH=4.0.2
+  - BRANCH=3.8.1
 
 script:
   - git clone https://github.com/compdatasci/octave-desktop.git master &&
