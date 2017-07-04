@@ -20,6 +20,32 @@ RUN apt-get update && \
         cmake \
         bsdtar \
         rsync \
+        texinfo \
+        libreadline-dev \
+        libncurses5-dev \
+        libhdf5 \
+        libhdf5-dev \
+        libblas-dev \
+        liblapack-dev \
+        libfftw3-single3 \
+        libfftw3-dev \
+        libamd2.4.1 \
+        libccolamd2.9.1 \
+        libcholmod3.0.6 \
+        libcolamd2.9.1 \
+        libcxsparse3.1.4 \
+        libfltk1.3 \
+        libfltk-gl1.3 \
+        libglpk36 \
+        libglu1 \
+        libglu1-mesa \
+        libgl1-mesa-dev \
+        libarpack2 \
+        libcholmod3.0.6 \
+        libcxsparse3.1.4 \
+        libgl2ps0 \
+        libgraphicsmagick++-q16 \
+        libgraphicsmagick-q16 \
         \
         gnuplot-x11 \
         libopenblas-base \
