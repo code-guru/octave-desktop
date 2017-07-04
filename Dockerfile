@@ -23,7 +23,6 @@ RUN apt-get update && \
         texinfo \
         libreadline-dev \
         libncurses5-dev \
-        libhdf5 \
         libhdf5-dev \
         libblas-dev \
         liblapack-dev \
@@ -44,8 +43,8 @@ RUN apt-get update && \
         libcholmod3.0.6 \
         libcxsparse3.1.4 \
         libgl2ps0 \
-        libgraphicsmagick++-q16 \
-        libgraphicsmagick-q16 \
+        libgraphicsmagick++-q16-12 \
+        libgraphicsmagick-q16-3 \
         \
         gnuplot-x11 \
         libopenblas-base \
