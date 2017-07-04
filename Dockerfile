@@ -31,8 +31,8 @@ RUN apt-get update && \
         libqtgui4 \
         libqt4-network \
         libqt4-opengl \
-        libreadline \
-        libxft \
+        libreadline6 \
+        libxft2 \
         \
         libncurses5-dev \
         libhdf5-dev \
@@ -41,7 +41,7 @@ RUN apt-get update && \
         libarpack2 \
         libfftw3-single3 \
         libfftw3-dev \
-        libsuitesparse \
+        libsuitesparse-dev \
         libfltk1.3 \
         libfltk-gl1.3 \
         libglpk36 \
@@ -52,9 +52,9 @@ RUN apt-get update && \
         libgl2ps0 \
         libgraphicsmagick++-q16-12 \
         libgraphicsmagick-q16-3 \
-        libzip \
+        libzip4 \
         libsndfile1 \
-        portaudio19 \
+        portaudio19-dev \
         \
         gnuplot-x11 \
         libopenblas-base \
