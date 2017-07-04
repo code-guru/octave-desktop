@@ -31,7 +31,7 @@ RUN apt-get update && \
         libqtgui4 \
         libqt4-network \
         libqt4-opengl \
-        libreadline6 \
+        libreadline-dev \
         libxft2 \
         \
         libncurses5-dev \
