@@ -20,7 +20,41 @@ RUN apt-get update && \
         cmake \
         bsdtar \
         rsync \
-        gdebi \
+        texinfo \
+        \
+        default-jdk \
+        libpcre3 \
+        libqhull7 \
+        libqrupdate1 \
+        libqscintilla2-12v5 \
+        libqtcore4 \
+        libqtgui4 \
+        libqt4-network \
+        libqt4-opengl \
+        libreadline \
+        libxft \
+        \
+        libncurses5-dev \
+        libhdf5-dev \
+        libblas-dev \
+        liblapack-dev \
+        libarpack2 \
+        libfftw3-single3 \
+        libfftw3-dev \
+        libsuitesparse \
+        libfltk1.3 \
+        libfltk-gl1.3 \
+        libglpk36 \
+        libglu1 \
+        libosmesa6 \
+        libglu1-mesa \
+        libgl1-mesa-dev \
+        libgl2ps0 \
+        libgraphicsmagick++-q16-12 \
+        libgraphicsmagick-q16-3 \
+        libzip \
+        libsndfile1 \
+        portaudio19 \
         \
         gnuplot-x11 \
         libopenblas-base \
@@ -41,7 +75,7 @@ RUN apt-get update && \
     \
     echo $(sh -c "echo '$CRED'") > mycred.txt && \
     gd-get -c . -p 0ByTwsK5_Tl_PZEszd0ZnWkdrRjA '*.deb' && \
-    gdebi -n octave_4.2.1-2_amd64.deb  liboctave4_4.2.1-2_amd64.deb \
+    dpkg -i octave_4.2.1-2_amd64.deb  liboctave4_4.2.1-2_amd64.deb \
         octave-common_4.2.1-2_all.deb liboctave-dev_4.2.1-2_amd64.deb && \
     \
     pip install sympy && \
