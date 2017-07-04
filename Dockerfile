@@ -12,8 +12,7 @@ WORKDIR /tmp
 ENV OCTAVE_VERSION=3.8.1
 
 # Install system packages and build Octave
-RUN apt-add-repository ppa:octave/stable && \
-    apt-get update && \
+RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         build-essential \
         python3-dev \
