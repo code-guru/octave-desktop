@@ -10,6 +10,7 @@ USER root
 WORKDIR /tmp
 
 ARG OCTAVE_VERSION=4.2.1
+ARG CRED=secret
 
 # Install system packages and build Octave
 RUN apt-get update && \
@@ -29,23 +30,26 @@ RUN apt-get update && \
         ttf-dejavu && \
     apt-get clean && \
     \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
+    curl -O https://bootstrap.pypa.io/get-pip.py && \
+    python3 get-pip.py && \
+    pip3 install -U setuptools && \
+    \
     git clone --depth 1 https://github.com/hpdata/gdutil /usr/local/gdutil && \
     pip2 install -r /usr/local/gdutil/requirements.txt && \
     pip3 install -r /usr/local/gdutil/requirements.txt && \
     ln -s -f /usr/local/gdutil/bin/* /usr/local/bin/ && \
     \
-    \
+    echo $(sh -c "echo '$CRED'") > mycred.txt && \
+    gd-get -c . -p 0ByTwsK5_Tl_PZEszd0ZnWkdrRjA '*.deb' && \
+    dpkg -i octave_4.2.1-2_amd64.deb  liboctave4_4.2.1-2_amd64.deb \
+        octave-common_4.2.1-2_all.deb liboctave-dev_4.2.1-2_amd64.deb && \
     \
     pip install sympy && \
     octave --eval 'pkg install -forge struct parallel symbolic' && \
-    rm -rf /tmp/* /var/tmp/*
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install Jupyter Notebook for Python and Octave
-RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
-    python3 get-pip.py && \
-    pip3 install -U \
-         setuptools \
+RUN pip3 install -U \
          ipython \
          jupyter \
          ipywidgets && \
