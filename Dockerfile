@@ -21,34 +21,41 @@ RUN apt-get update && \
         bsdtar \
         rsync \
         texinfo \
-        libreadline-dev \
+        \
+        default-jdk \
+        libpcre3 \
+        libqhull \
+        libqrupdate \
+        libqscintilla2 \
+        libqt4 \
+        libqt4-opengl \
+        libreadline \
+        libxft \
+        \
         libncurses5-dev \
         libhdf5-dev \
         libblas-dev \
         liblapack-dev \
+        libarpack2 \
         libfftw3-single3 \
         libfftw3-dev \
-        libamd2.4.1 \
-        libccolamd2.9.1 \
-        libcholmod3.0.6 \
-        libcolamd2.9.1 \
-        libcxsparse3.1.4 \
+        libsuitesparse \
         libfltk1.3 \
         libfltk-gl1.3 \
         libglpk36 \
         libglu1 \
+        libosmesa6 \
         libglu1-mesa \
         libgl1-mesa-dev \
-        libarpack2 \
-        libcholmod3.0.6 \
-        libcxsparse3.1.4 \
         libgl2ps0 \
         libgraphicsmagick++-q16-12 \
         libgraphicsmagick-q16-3 \
+        libzip \
+        libsndfile1 \
+        portaudio19 \
         \
         gnuplot-x11 \
         libopenblas-base \
-        pstoedit \
         \
         python3-dev \
         pandoc \
