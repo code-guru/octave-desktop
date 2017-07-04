@@ -28,13 +28,13 @@ RUN apt-add-repository ppa:octave/stable && \
         gdb \
         ccache \
         \
-        octave \
+        octave=$OCTAVE_VERSION\* \
+        liboctave-dev=$OCTAVE_VERSION\* \
+        octave-info=$OCTAVE_VERSION\* \
         gnuplot-x11 \
-        liboctave-dev \
         libopenblas-base \
         libatlas3-base \
         pstoedit \
-        octave-info \
         \
         pandoc \
         ttf-dejavu && \
