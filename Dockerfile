@@ -24,9 +24,9 @@ RUN add-apt-repository ppa:compdatasci/octave && \
         gnuplot-x11 \
         libopenblas-base \
         \
-        octave_$OCTAVE_VERSION\* \
-        liboctave-dev_$OCTAVE_VERSION\* \
-        octave-info_$OCTAVE_VERSION\* \
+        octave=$OCTAVE_VERSION\* \
+        liboctave-dev=$OCTAVE_VERSION\* \
+        octave-info=$OCTAVE_VERSION\* \
         \
         python3-dev \
         pandoc \
