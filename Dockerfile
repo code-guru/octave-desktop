@@ -22,7 +22,6 @@ RUN apt-get update && \
         rsync \
         texinfo \
         \
-        default-jdk \
         libpcre3 \
         libqhull7 \
         libqrupdate1 \
@@ -33,13 +32,11 @@ RUN apt-get update && \
         libqt4-opengl \
         libreadline-dev \
         libxft2 \
-        \
         libncurses5-dev \
         libhdf5-dev \
         libblas-dev \
         liblapack-dev \
         libarpack2 \
-        libfftw3-single3 \
         libfftw3-dev \
         libsuitesparse-dev \
         libfltk1.3 \
