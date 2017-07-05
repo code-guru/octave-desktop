@@ -10,7 +10,6 @@ USER root
 WORKDIR /tmp
 
 ARG OCTAVE_VERSION=4.2.1
-ARG CRED=secret
 
 # Install system packages and build Octave
 RUN add-apt-repository ppa:compdatasci/octave && \
