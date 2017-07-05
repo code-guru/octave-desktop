@@ -21,6 +21,7 @@ RUN apt-get update && \
         bsdtar \
         rsync \
         texinfo \
+        info \
         \
         libpcre3 \
         libqhull7 \
@@ -73,7 +74,8 @@ RUN apt-get update && \
     echo $(sh -c "echo '$CRED'") > mycred.txt && \
     gd-get -c . -p 0ByTwsK5_Tl_PZEszd0ZnWkdrRjA '*.deb' && \
     dpkg -i octave_4.2.1-2_amd64.deb  liboctave4_4.2.1-2_amd64.deb \
-        octave-common_4.2.1-2_all.deb liboctave-dev_4.2.1-2_amd64.deb && \
+        octave-common_4.2.1-2_all.deb liboctave-dev_4.2.1-2_amd64.deb \
+        octave-info_4.2.1-2_all.deb && \
     \
     pip install sympy && \
     octave --eval 'pkg install -forge struct parallel symbolic' && \
