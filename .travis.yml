@@ -22,11 +22,11 @@ script:
   - '[[ "$TRAVIS_EVENT_TYPE" == "push" && -n "$TRAVIS_COMMIT_RANGE" &&
         -z "$(git diff --name-only $TRAVIS_COMMIT_RANGE |
             grep -e Dockerfile -e .travis.yml)" ]] || [[ "$XVFB" != "1" ]] ||
-     (docker build --tag compdatasci/octave-desktop:4.0.2 . &&
-      docker push compdatasci/octave-desktop:4.0.2 &&
+     (docker build --tag compdatasci/octave-desktop:4.2.1 . &&
+      docker push compdatasci/octave-desktop:4.2.1 &&
       touch success)'
   # Test script without launching webbrowser and push new image if successful
   - git clone https://github.com/compdatasci/octave-desktop master
-  - 'master/octave_desktop.py -d -n -t 4.0.2 && docker stop $(docker ps -q)'
-  - 'master/octave_jupyter.py -d -n -t 4.0.2 && docker stop $(docker ps -q)'
+  - 'master/octave_desktop.py -d -n -t 4.2.1 && docker stop $(docker ps -q)'
+  - 'master/octave_jupyter.py -d -n -t 4.2.1 && docker stop $(docker ps -q)'
   - docker images

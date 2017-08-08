@@ -9,7 +9,7 @@ LABEL maintainer "Xiangmin Jiao <xmjiao@gmail.com>"
 USER root
 WORKDIR /tmp
 
-ENV OCTAVE_VERSION=4.0.2
+ENV OCTAVE_VERSION=4.2.1
 
 # Install system packages and build Octave
 RUN apt-add-repository ppa:octave/stable && \
