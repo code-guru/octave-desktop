@@ -1,4 +1,4 @@
-# Builds a Docker image for Octave 4.2.1 and Jupyter Notebook for Octave
+# Builds a Docker image for Octave and Jupyter Notebook for Octave
 #
 # Authors:
 # Xiangmin Jiao <xmjiao@gmail.com>
@@ -9,11 +9,10 @@ LABEL maintainer "Xiangmin Jiao <xmjiao@gmail.com>"
 USER root
 WORKDIR /tmp
 
-ENV OCTAVE_VERSION=4.0.2
+ENV OCTAVE_VERSION=4.0
 
 # Install system packages and build Octave
-RUN apt-add-repository ppa:octave/stable && \
-    apt-get update && \
+RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         build-essential \
         python3-dev \
