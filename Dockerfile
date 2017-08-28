@@ -24,6 +24,9 @@ RUN add-apt-repository ppa:compdatasci/octave && \
         gnuplot-x11 \
         libopenblas-base \
         \
+        ghostscript \
+        slang-xfig \
+        \
         octave=$OCTAVE_VERSION\* \
         liboctave-dev=$OCTAVE_VERSION\* \
         octave-info=$OCTAVE_VERSION\* \
